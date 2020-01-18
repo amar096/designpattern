@@ -8,9 +8,13 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static void Main(string[] args)
+       public static void Main(string[] args)
         {
-            sadgfasdgdsgasdgfxbzxf
+            Reciever reciever = new Reciever();
+            Invoker invoker = new Invoker(new CommandSwitchOff(reciever),new CommandSwitchOn(reciever));
+
+            invoker.SwitchOn();
+            invoker.SwitchOff();
         }
     }
 }
